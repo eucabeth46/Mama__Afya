@@ -23,7 +23,7 @@ def team(request):
             'bio': "Led the team in building the UI/UX of a mobile-app using React Native with Firebase Authentication, ensuring cross-platform performance. Orchestrated team collaboration, sprint planning, code reviews, and architecture while implementing real-time Firestore updates and Redux state management.",
             'image': 'images/team/eucabeth.jpg',
             'linkedin': 'eucabeth-awino',
-            'github': 'eucabeth',
+            'github': 'https://github.com/eucabeth46',
             'twitter': 'eucabeth_awino'
         },
         {
@@ -59,7 +59,7 @@ def team(request):
             'bio': 'Denis Munene Ndegwa is a data-driven engineer and machine learning enthusiast who led the backend development and containerization of the Maternal Risk Prediction API. Leveraging his skills in Python and FastAPI, Denis designed and implemented RESTful endpoints, integrated MongoDB for data persistence, and managed the entire Docker-based containerization process to ensure the application is scalable and deployable. His work focused on ensuring reliable API performance while integrating machine learning predictions to support maternal health interventions in Kenya.',
             'image': 'images/team/munene.jpeg',
             'linkedin': 'denis-ndegwa',
-            'github': 'MUNENE1212',
+            'github': 'https://github.com/MUNENE1212',
             'twitter': 'denis_ndegwa'
         }
     ]
@@ -142,3 +142,5 @@ def team(request):
 
 def technical(request):
     return render(request, 'core/technical.html')
+def gallery(request):
+    return render(request, 'core/gallery.html')

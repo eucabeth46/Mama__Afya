@@ -16,6 +16,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 4rem;
+        /* Removed any green background or color here */
     }
     
     .section-heading {
@@ -32,7 +33,7 @@
         transform: translateX(-50%);
         width: 80px;
         height: 3px;
-        background: var(--accent-pink);
+        background: #0f39c2;
     }
     
     /* Team Grid Layout */
@@ -105,12 +106,12 @@
     }
     
     .team-card:hover .member-name {
-        color: var(--accent-pink);
+        color: #0f39c2;
     }
     
     .member-role {
         font-size: 1rem;
-        color: var(--primary-teal);
+        color: var(--blue);
         margin-bottom: 1rem;
         font-weight: 600;
     }
@@ -128,7 +129,7 @@
     }
     
     .read-more-btn {
-        color: var(--primary-teal);
+        color: var(--blue);
         font-size: 0.9rem;
         font-weight: 600;
         cursor: pointer;
@@ -138,7 +139,7 @@
     }
     
     .read-more-btn:hover {
-        color: var(--accent-pink);
+        color: #0f39c2;
     }
     
     .expanded .member-bio {
@@ -211,8 +212,8 @@
     }
     
     .partner-logo {
-        max-width: 100%;
-        max-height: 80px;
+        max-width: 180px !important;
+        max-height: 120px !important;
         filter: grayscale(100%);
         opacity: 0.7;
         transition: all 0.4s ease;
@@ -245,13 +246,13 @@
     .contact-icon {
         width: 60px;
         height: 60px;
-        background-color: var(--light-teal);
+        background-color: #0f39c2 !important; /* Use the navbar blue */
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 1.5rem;
-        color: var(--deep-blue);
+        color: #fff;
         font-size: 1.5rem;
     }
     
@@ -260,12 +261,12 @@
     }
     
     .contact-link {
-        color: var(--primary-teal);
+        color: var(--blue);
         transition: color 0.3s ease;
     }
     
     .contact-link:hover {
-        color: var(--accent-pink);
+        color: #0f39c2;
     }
     
     /* Responsive adjustments */
@@ -324,16 +325,16 @@
     }
     
     .close-modal:hover {
-        color: var(--accent-pink);
+        color: #0f39c2;
     }
     
     .modal-name {
-        color: var(--accent-pink);
+        color: #0f39c2;
         margin-bottom: 0.5rem;
     }
     
     .modal-role {
-        color: var(--primary-teal);
+        color: #0f39c2;
         margin-bottom: 1.5rem;
         font-weight: 500;
     }
@@ -384,7 +385,7 @@
     
     /* Shimmer effect for section titles */
     .title-shimmer {
-        background: linear-gradient(to right, var(--primary-teal) 0%, var(--accent-pink) 50%, var(--primary-teal) 100%);
+        background: linear-gradient(to right, var(--blue) 0%, var(--accent-pink) 50%, var(--primary-teal) 100%);
         background-size: 200% auto;
         color: transparent;
         background-clip: text;
@@ -403,10 +404,10 @@
 <!-- Hero Banner Section -->
 <section class="team-banner">
     <div class="particles-background" id="particles-js"></div>
-    <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1000">
+    <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1000" style="background: none !important; box-shadow: none !important;">
         <h5 class="text-warning fw-bold mb-3 shimmer-text">Meet The Innovators</h5>
         <h1 class="display-4 fw-bold mb-3">Our Talented Team</h1>
-        <p class="lead">The experts behind MamaGuardian AI working to improve maternal healthcare in Kenya</p>
+        <p class="lead" style="color: #fff;">The experts behind MamaGuardian AI, working to improve maternal healthcare in Kenya</p>
     </div>
 </section>
 
@@ -437,18 +438,18 @@
                 {% endif %}
                 <div class="social-links">
                     {% if member.linkedin %}
-                    <a href="https://www.linkedin.com/in/{{ member.linkedin }}" target="_blank" class="social-link linkedin-link" title="LinkedIn">
-                        <img src="{% static 'images/linked_in.png' %}" alt="LinkedIn" ;">
+                    <a href="https://www.linkedin.com/in/{{ member.linkedin }}" target="_blank" class="social-link linkedin-link" title="LinkedIn" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
                     {% endif %}
                     {% if member.github %}
-                    <a href="https://github.com/{{ member.github }}" target="_blank" class="social-link github-link" title="GitHub">
-                        <img src="{% static 'images/github.jpg' %}" alt="Github" ;">
+                    <a href="https://github.com/{{ member.github }}" target="_blank" class="social-link github-link" title="GitHub" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
                     </a>
                     {% endif %}
                     {% if member.twitter %}
-                    <a href="https://x.com/{{ member.x }}" target="_blank" class="social-link twitter-link" title="X">
-                        <img src="{% static 'images/x.jpg' %}" alt="X" ;">
+                    <a href="https://x.com/{{ member.x }}" target="_blank" class="social-link twitter-link" title="X" rel="noopener" aria-label="Twitter">
+                        <span style="font-size:1.5rem; font-weight:bold; font-family:sans-serif; display:inline-block; line-height:1;">X</span>
                     </a>
                     {% endif %}
                 </div>
@@ -522,11 +523,11 @@
                         <div class="contact-icon">
                             <i class="bi bi-telephone"></i>
                         </div>
-                        <h4>Call Us</h4>
+                        <h4>Contact Us</h4>
                         <p class="contact-info">
-                            <a href="tel:+254700123456" class="contact-link">+254 700 123 456</a>
+                            <a href="tel:+254700123456" class="contact-link">+254 718603583</a>
                         </p>
-                        <p class="text-muted">Mon-Fri, 8:00 AM - 5:00 PM</p>
+                        <p class="text-muted">Mon-Sat, 8:00 AM - 5:00 PM <br>(Sun, 11:00 AM - 3:00 PM)</p>
                     </div>
                 </div>
                 
@@ -536,7 +537,7 @@
                             <i class="bi bi-geo-alt"></i>
                         </div>
                         <h4>Visit Us</h4>
-                        <p class="contact-info">iHub, Nairobi, Kenya</p>
+                        <p class="contact-info">JHub, Nairobi, Kenya</p>
                         <p class="text-muted">By appointment only</p>
                     </div>
                 </div>
@@ -695,11 +696,11 @@
         
         teamCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.querySelector('.member-name').style.color = 'var(--accent-pink)';
+                this.querySelector('.member-name').style.color = "#0f39c2";
             });
             
             card.addEventListener('mouseleave', function() {
-                this.querySelector('.member-name').style.color = 'var(--deep-blue)';
+                this.querySelector('.member-name').style.color = "#0f39c2";
             });
         });
     });

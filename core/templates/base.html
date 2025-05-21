@@ -16,11 +16,21 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
+    <style>
+        .navbar .nav-link.active, .navbar .nav-link[aria-current="page"] {
+            color: #000 !important;
+            font-weight: bold;
+        }
+        .navbar .nav-link:hover, .navbar .nav-link:focus {
+            color: #072169 !important; /* Deep blue */
+            background: none !important;
+        }
+    </style>
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <span class="text-danger">Mama</span>Guardian AI
@@ -31,16 +41,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'technical' %}">Implimentation</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'technical' %}active{% endif %}" href="{% url 'technical' %}">Implimentation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'team' %}">Team</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}" href="{% url 'team' %}">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}" href="{% url 'gallery' %}">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +66,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class=" text-white py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -65,9 +78,11 @@
                     <ul class="list-unstyled">
                         <li><a href="{% url 'home' %}" class="text-white">Home</a></li>
                         <li><a href="{% url 'about' %}" class="text-white">About</a></li>
-                        <li><a href="{% url 'technical' %}" class="text-white">Implimentation</a></li>
+                        <li><a href="{% url 'technical' %}" class="text-white">Implementation</a></li>
                         <li><a href="{% url 'team' %}" class="text-white">Team</a></li>
+                        <li><a href="{% url 'gallery' %}" class="text-white">Gallery</a></li>
                     </ul>
+
                 </div>
                 <div class="col-md-3">
                     <h5>Connect</h5>

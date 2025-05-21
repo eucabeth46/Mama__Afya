@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Home | MamaGuardian AI{% endblock %}
+<!-- {% block title %}Home | MamaGuardian AI{% endblock %} -->
 
 {% block extra_css %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -10,12 +10,15 @@
 
 {% block content %}
 <section class="text-white text-center d-flex align-items-center justify-content-center hero-section"
-         style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('{% static 'images/mama2.jpg' %}') center/cover no-repeat; height: 90vh;">
-    <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1000">
-        <h5 class="text-warning fw-bold mb-3 shimmer-text">Over 6,000 maternal deaths annually in Kenya</h5>
-        <h1 class="display-4 fw-bold mb-4">Afya ya mama, furaha ya jamii</h1>
-        <p class="lead mb-5">MamaGuardian AI uses machine learning to flag high-risk pregnancies early — helping mothers get care before complications arise.</p>
-        <a href="{% url 'about' %}" class="btn btn-accent btn-lg">Learn More</a>
+         style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('{% static 'images/mama1.webp' %}') center/cover no-repeat; height: 90vh;">
+    <div class="w-100" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-1 fw-bold mb-4 " style="font-size: 5rem; margin-top: 2%; color: #fff; text-shadow: 3px 3px 12px #000;">Mama Guardian</h1>
+         <h1 class="fw-bold mb-3 " style="font-size: 1.5rem; color: gray; text-shadow: 2px 2px 8px #000;">Afya ya mama, furaha ya jamii</h1>
+        <!-- <h5 class="fw-bold mb-3 shimmer-text" style="font-size: 1.5rem; color: #FFD600; text-shadow: 2px 2px 8px #000;">Over 6,000 maternal deaths annually in Kenya</h5> -->
+        <p class="lead mb-5" style="font-size: 2.3 rem; color: #fff; text-shadow: 2px 2px 8px #000;">
+            MamaGuardian AI uses machine learning to flag high-risk pregnancies early — helping mothers get care before complications arise.
+        </p>
+        <a href="{% url 'team' %}" class="btn btn-outline-primary mt-3">Learn More</a>
     </div>
 </section>
 
@@ -23,17 +26,17 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-md-4 mb-4" data-aos="zoom-in">
-                <i class="fas fa-heartbeat fa-3x text-danger mb-3"></i>
+                <i class="fas fa-heartbeat fa-3x mb-3" style="color: #0f39c2;"></i>
                 <h4 class="fw-bold">Health Monitoring</h4>
                 <p>Real-time maternal health tracking using wearable technology and mobile updates.</p>
             </div>
             <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fas fa-brain fa-3x text-danger mb-3"></i>
+                <i class="fas fa-brain fa-3x mb-3" style="color: #0f39c2;"></i>
                 <h4 class="fw-bold">Predictive AI</h4>
                 <p>Early detection of risk factors using machine learning models tailored to local data.</p>
             </div>
             <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
-                <i class="fas fa-hands-helping fa-3x text-danger mb-3"></i>
+                <i class="fas fa-hands-helping fa-3x mb-3" style="color: #0f39c2;"></i>
                 <h4 class="fw-bold">Community Support</h4>
                 <p>Resources, referrals, and health education accessible through local networks and CHVs.</p>
             </div>
