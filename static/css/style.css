@@ -1,0 +1,135 @@
+:root {
+  --primary-teal: #2FB5A5;
+  --accent-pink: #FF6B8B;
+  --deep-blue: #2D4059;
+  --warm-sand: #F8F4E3;
+  --light-teal: #A9EEE6;
+  --soft-lavender: #E2D1F9;
+  --chai-brown: #B98B73;
+  --warm-gray: #F0F0F0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--deep-blue);
+}
+
+.btn-primary {
+  background-color: var(--primary-teal);
+  border-color: var(--primary-teal);
+}
+
+.btn-primary:hover {
+  background-color: #28a090;
+}
+
+.btn-outline-primary {
+  color: var(--primary-teal);
+  border-color: var(--primary-teal);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-teal);
+  color: white;
+}
+
+.btn-danger, .btn-accent {
+  background-color: var(--accent-pink);
+  border-color: var(--accent-pink);
+}
+
+.btn-danger:hover, .btn-accent:hover {
+  background-color: #e85f7d;
+  border-color: #e85f7d;
+}
+
+.text-danger {
+  color: var(--accent-pink);
+}
+
+.text-primary {
+  color: var(--primary-teal);
+}
+
+.bg-white {
+  background-color: var(--warm-sand);
+}
+
+.bg-light {
+  background-color: var(--warm-gray);
+}
+
+.bg-accent {
+  background-color: var(--light-teal);
+}
+
+.bg-accent-soft {
+  background-color: var(--soft-lavender);
+}
+
+.card, .bg-card {
+  background-color: var(--warm-sand);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card {
+  border-left: 4px solid var(--primary-teal);
+  background-color: var(--warm-sand);
+}
+
+.dashboard-card.high-risk {
+  border-left: 4px solid var(--accent-pink);
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+  color: var(--deep-blue);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-teal);
+}
+
+footer {
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+footer a {
+  color: var(--light-teal);
+}
+
+.form-control:focus {
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 0.25rem rgba(47, 181, 165, 0.25);
+}
+
+.table-accent thead {
+  background-color: var(--primary-teal);
+  color: white;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(169, 238, 230, 0.2);
+}
+
+.border-accent {
+  border-color: var(--accent-pink) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-teal) !important;
+}
+
+.progress-bar {
+  background-color: var(--primary-teal);
+}
+
+.progress-bar.high-risk {
+  background-color: var(--accent-pink);
+}
+

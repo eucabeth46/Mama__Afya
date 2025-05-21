@@ -12,7 +12,6 @@ myenv/
 db.sqlite3
 
 # Ignore static and media if needed
-/static/
 /media/
 
 # Ignore Django migrations
@@ -197,3 +196,4 @@ cython_debug/
 =======
 
 >>>>>>> 12e78cc25f9cc7a4d8cabc679e48728a85b593d9
+./git

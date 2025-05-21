@@ -1,0 +1,168 @@
+/* animations.css - Place in your static/css folder */
+
+/* General Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.7s ease;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(66, 133, 244, 0.15), rgba(219, 68, 55, 0.25));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.hero-section:hover::before {
+    opacity: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.hero-section:hover .content-wrapper {
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Effects */
+.shimmer-text {
+    background: linear-gradient(to right, #ffd700 0%, #ffc107 20%, #ffd700 40%, #ffc107 60%, #ffd700 80%, #ffc107 100%);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    to { background-position: 200% center; }
+}
+
+/* Button Animations */
+.pulse-btn {
+    background-color: #e63946;
+    border-color: #e63946;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.pulse-btn:hover {
+    background-color: #d62c3b;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(230, 57, 70, 0.4);
+}
+
+.pulse-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.pulse-btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.hover-btn {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-width: 2px;
+}
+
+.hover-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cards and Sections */
+.impact-card {
+    transition: all 0.4s ease;
+    border-bottom: 3px solid transparent;
+    overflow: hidden;
+}
+
+.impact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #e63946;
+}
+
+.impact-text {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover .impact-text {
+    transform: translateY(-5px);
+}
+
+.impact-card:hover h3 {
+    color: #d62c3b;
+}
+
+/* Counter Animation */
+.counter-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.counter-animation::after {
+    content: "%";
+    font-size: 0.6em;
+    position: relative;
+    top: -0.5em;
+    margin-left: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+    
+    .hero-section:hover .content-wrapper {
+        transform: translateY(-5px);
+    }
+}
