@@ -1,0 +1,176 @@
+/* MamaGuardian AI - Custom CSS Styles
+ * This file contains custom color schemes and styling to create
+ * a warm and engaging healthcare environment for the website
+ */
+
+:root {
+  /* Primary Color Palette */
+  --primary-teal: #2FB5A5;
+  --accent-pink: #FF6B8B;
+  --deep-blue: #2D4059;
+  --warm-sand: #F8F4E3;
+  
+  /* Supporting Colors */
+  --light-teal: #A9EEE6;
+  --soft-lavender: #E2D1F9;
+  --chai-brown: #B98B73;
+  --warm-gray: #F0F0F0;
+}
+
+/* Typography Adjustments */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--deep-blue);
+}
+
+/* Banner and Hero Sections */
+.hero-banner {
+  background: linear-gradient(rgba(47, 181, 165, 0.8), rgba(255, 107, 139, 0.6)), var(--bg-image) center/cover no-repeat !important;
+}
+
+/* Replace default Bootstrap button styles */
+.btn-primary {
+  background-color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+.btn-primary:hover {
+  background-color: #28a090 !important;
+  border-color: #28a090 !important;
+}
+
+.btn-outline-primary {
+  color: var(--primary-teal) !important;
+  border-color: var(--primary-teal) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-teal) !important;
+  color: white !important;
+}
+
+/* Replace danger button with accent button */
+.btn-danger, .btn-accent {
+  background-color: var(--accent-pink) !important;
+  border-color: var(--accent-pink) !important;
+}
+
+.btn-danger:hover, .btn-accent:hover {
+  background-color: #e85f7d !important;
+  border-color: #e85f7d !important;
+}
+
+.btn-outline-light:hover {
+  color: var(--deep-blue) !important;
+}
+
+/* Text colors */
+.text-danger, .highlight-text {
+  color: var(--accent-pink) !important;
+}
+
+.text-primary {
+  color: var(--primary-teal) !important;
+}
+
+/* Card and Container Backgrounds */
+.card, .bg-card {
+  background-color: var(--warm-sand) !important;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.bg-white {
+  background-color: var(--warm-sand) !important;
+}
+
+/* Section backgrounds */
+.bg-light {
+  background-color: var(--warm-gray) !important;
+}
+
+.bg-accent {
+  background-color: var(--light-teal) !important;
+}
+
+.bg-accent-soft {
+  background-color: var(--soft-lavender) !important;
+}
+
+/* Stats and metrics highlights */
+.stat-highlight {
+  color: var(--accent-pink);
+  font-weight: bold;
+}
+
+/* Banner overlays */
+.bg-dark.text-white {
+  background: linear-gradient(rgba(47, 181, 165, 0.8), rgba(255, 107, 139, 0.6)) !important;
+}
+
+/* Dashboard elements */
+.dashboard-card {
+  border-left: 4px solid var(--primary-teal);
+  background-color: var(--warm-sand);
+}
+
+.dashboard-card.high-risk {
+  border-left: 4px solid var(--accent-pink);
+}
+
+/* Navigation */
+.navbar {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+  color: var(--deep-blue) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-teal) !important;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+footer a {
+  color: var(--light-teal);
+}
+
+/* Forms */
+.form-control:focus {
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 0.25rem rgba(47, 181, 165, 0.25);
+}
+
+/* Tables */
+.table-accent thead {
+  background-color: var(--primary-teal);
+  color: white;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(169, 238, 230, 0.2);
+}
+
+/* Utility classes */
+.border-accent {
+  border-color: var(--accent-pink) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-teal) !important;
+}
+
+/* Progress bars */
+.progress-bar {
+  background-color: var(--primary-teal);
+}
+
+.progress-bar.high-risk {
+  background-color: var(--accent-pink);
+}

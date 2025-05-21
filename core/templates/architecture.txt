@@ -1,0 +1,138 @@
+
+🧩 Slide 1: Introduction
+
+Objective:
+Present a clear overview of the system’s architecture from backend to frontend, and its integration with the database.
+
+Audience:
+Junior developers, university students, or stakeholders interested in the system’s tech foundation.
+🔗 Slide 2: System Overview
+
+Modules Involved:
+
+    User Authentication (Mothers, Admins, Support Providers)
+
+    Pregnancy Record Management
+
+    Support Network Connections
+
+    AI Risk Prediction Endpoint
+
+    Notification Service (e.g., SMS for follow-up reminders)
+
+🗺️ Slide 3: High-Level Architecture
+
+Diagram Structure:
+
+    Frontend (React.js / Flutter)
+
+        User Forms & Dashboards
+
+    Backend (FastAPI)
+
+        RESTful API endpoints (auth, pregnancies, support)
+
+        AI Model Integration (maternal risk prediction)
+
+    Database (MongoDB)
+
+        Collections: users, pregnancies, support_network, feedback, etc.
+
+    External Services (Optional)
+
+        SMS Gateway
+
+        AI Model Hosting (if on external server)
+
+(📌 Use draw.io or diagrams.net for a visual diagram here.)
+🧩 Slide 4: Component Diagram
+
+Major Components:
+
+    Authentication Service: Login, JWT tokens, role-based access
+
+    Pregnancy Tracker: Record, update, analyze pregnancy data
+
+    Support Network Module: Connect mothers with providers, maintain history
+
+    Risk Assessment Model: XGBoost/RandomForest-based risk predictions
+
+    Notification & Feedback: Allow feedback and alerts to the mother
+
+(Show arrows of data flow: e.g., support data → prediction → risk category → notify)
+💾 Slide 5: Database Design
+
+Collections (MongoDB):
+
+    users – login credentials, roles (admin/mother/support)
+
+    pregnancies – medical history, conditions, ANC visits
+
+    support_network – provider connections and engagement
+
+    predictions – model results, risk scores
+
+    feedback – user feedback on services
+
+Design Notes:
+
+    NoSQL fits flexibility for medical history updates
+
+    Indexed fields for quick querying on pregnancy ID and user ID
+
+🧠 Slide 6: From UI to Backend (Request Lifecycle)
+
+Example: Registering a New Pregnancy Record
+
+    UI Form Submit (Mother dashboard)
+
+    API Call to /api/pregnancies/
+
+    Backend Logic: Validate, store in DB
+
+    AI Prediction Triggered
+
+    Response: Prediction returned + stored
+
+    UI Feedback: Success or alert shown
+
+🧰 Slide 7: Technology Stack
+Layer	Tech Used
+Frontend	React.js or Flutter
+Backend	FastAPI (Python)
+Database	MongoDB Atlas
+AI Model	XGBoost, RF (sklearn joblib model)
+DevOps	GitHub + CI/CD (optional)
+🔄 Slide 8: Integration Diagram
+
+Data Flow Map:
+UI ➝ FastAPI ➝ MongoDB ➝ ML Model ➝ DB ➝ Notification ➝ UI
+
+Use color-coded arrows to show:
+
+    Data input flow
+
+    Risk prediction workflow
+
+    Response delivery
+
+📱 Slide 9: Optional UI Screens
+
+    Login Page (Role-based)
+
+    Mother Dashboard – record pregnancies
+
+    Support Network Screen – chat / feedback
+
+    Admin Panel – user and system monitoring
+
+Use Figma screenshots or mockups if available.
+✅ Slide 10: Summary
+
+    Real-world system built using modular architecture
+
+    AI-powered predictions help enhance maternal care
+
+    MongoDB enables flexibility for health records
+
+    System integrates UI, backend, and data science logic seamlessly

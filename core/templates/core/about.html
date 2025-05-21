@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About | MamaGuardian AI{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background: url('{% static 'images/about.jpg' %}') center/cover no-repeat;">
+    <div class="container hero-content text-center">
+        <h1 class="display-4 fw-bold mb-4" data-aos="fade-up">About MamaGuardian AI</h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Using AI to save mothers' lives in Kenya</p>
+        <div data-aos="fade-up" data-aos-delay="400">
+            <a href="#mission" class="btn btn-light btn-lg rounded-pill px-4 me-2">Our Mission</a>
+            <a href="#objectives" class="btn btn-outline-light btn-lg rounded-pill px-4">Our Objectives</a>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section id="mission" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2 class="fw-bold mb-4">Our Mission</h2>
+                <p class="lead text-primary fw-bold">Afya ya mama, furaha ya jamii</p>
+                <p>MamaGuardian AI is a project dedicated to leveraging machine learning to reduce maternal deaths in Kenya. We target rural and underserved regions where access to maternal care is limited and preventable deaths are most common.</p>
+                <p>Our solution utilizes historical health records and real-time data to classify high-risk pregnancies, generate alerts for Community Health Volunteers (CHVs), and support county-level health decision-making through an intelligent dashboard.</p>
+                <div class="mt-4">
+                    <a href="/technical" class="btn btn-primary rounded-pill px-4">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="position-relative">
+                    <img src="{% static 'images/about.jpg' %}" class="img-fluid rounded shadow-lg floating" alt="About MamaGuardian">
+                    <div class="position-absolute top-0 end-0 translate-middle-y">
+                        <div class="bg-white rounded-circle p-3 shadow pulse" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+                            <div class="text-center">
+                                <span class="d-block counter-value" data-target="90">0</span>
+                                <small class="text-muted">Lives Saved</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up">
+                <div class="stat-card bg-white rounded shadow">
+                    <i class="fas fa-hospital-user fa-3x text-primary mb-3"></i>
+                    <div class="stat-number counter-value" data-target="5000">0</div>
+                    <p class="text-muted">Mothers Monitored</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card bg-white rounded shadow">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <div class="stat-number counter-value" data-target="80">0</div>
+                    <p class="text-muted">Community Health Volunteers</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-card bg-white rounded shadow">
+                    <i class="fas fa-clinic-medical fa-3x text-primary mb-3"></i>
+                    <div class="stat-number counter-value" data-target="8">0</div>
+                    <p class="text-muted">Health Facilities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Objectives Section -->
+<section id="objectives" class="py-5">
+    <div class="container">
+        <h2 class="text-center section-heading" data-aos="fade-up">Project Objectives</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card h-100 feature-item">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary">01. Predict High-Risk Pregnancies</h5>
+                        <p class="text-muted">Use machine learning to flag risk patterns early for timely medical attention.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">90% Implementation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 feature-item">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary">02. Empower CHVs and Clinics</h5>
+                        <p class="text-muted">Provide community health workers with real-time insights via mobile interface.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">75% Implementation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 feature-item">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h5 class="fw-bold text-primary">03. Strengthen County Health Systems</h5>
+                        <p class="text-muted">Enable data-driven decisions at the county level with actionable dashboards.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">60% Implementation</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="/team" class="btn btn-primary rounded-pill px-4">Meet Our Team</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary">
+    <div class="container text-center text-white">
+        <h2 class="fw-bold mb-4" data-aos="fade-up">Ready to Make a Difference?</h2>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Join us in our mission to make pregnancy safer in Kenya</p>
+        <div data-aos="fade-up" data-aos-delay="400">
+            <a href="/contact" class="btn btn-light btn-lg rounded-pill px-4 me-3">Contact Us</a>
+            <a href="/get-started" class="btn btn-outline-light btn-lg rounded-pill px-4">Get Started</a>
+        </div>
+    </div>
+</section>
+
+{% block extra_js %}
+<script>
+    // Page-specific animations and effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const heroSection = document.querySelector('.hero-section');
+            const scrollPosition = window.pageYOffset;
+            heroSection.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
+        });
+    });
+</script>
+{% endblock %}
+{% endblock %}

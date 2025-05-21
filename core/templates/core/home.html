@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | MamaGuardian AI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="{% static 'css/animations.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="text-white text-center d-flex align-items-center justify-content-center hero-section"
+         style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('{% static 'images/mama2.jpg' %}') center/cover no-repeat; height: 90vh;">
+    <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1000">
+        <h5 class="text-warning fw-bold mb-3 shimmer-text">Over 6,000 maternal deaths annually in Kenya</h5>
+        <h1 class="display-4 fw-bold mb-4">Afya ya mama, furaha ya jamii</h1>
+        <p class="lead mb-5">MamaGuardian AI uses machine learning to flag high-risk pregnancies early — helping mothers get care before complications arise.</p>
+        <a href="{% url 'about' %}" class="btn btn-accent btn-lg">Learn More</a>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4" data-aos="zoom-in">
+                <i class="fas fa-heartbeat fa-3x text-danger mb-3"></i>
+                <h4 class="fw-bold">Health Monitoring</h4>
+                <p>Real-time maternal health tracking using wearable technology and mobile updates.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-brain fa-3x text-danger mb-3"></i>
+                <h4 class="fw-bold">Predictive AI</h4>
+                <p>Early detection of risk factors using machine learning models tailored to local data.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fas fa-hands-helping fa-3x text-danger mb-3"></i>
+                <h4 class="fw-bold">Community Support</h4>
+                <p>Resources, referrals, and health education accessible through local networks and CHVs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4" data-aos="fade-right">
+                <img src="{% static 'images/happy.jpg' %}" alt="AI Healthcare" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <h2 class="mb-3 fw-bold">Why MamaGuardian Matters</h2>
+                <p>Maternal mortality is preventable. Our solution empowers expectant mothers and care providers with intelligent insights to make timely, life-saving decisions. Join us in reducing preventable deaths across Kenya.</p>
+                <a href="{% url 'team' %}" class="btn btn-outline-primary mt-3">Meet the Team</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+{% endblock %}
+

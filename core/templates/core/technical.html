@@ -1,0 +1,340 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Technical Implementation | MamaGuardian AI{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background: url('{% static 'images/tech-banner.jpg' %}') center/cover no-repeat;">
+    <div class="container hero-content text-center">
+        <h1 class="display-4 fw-bold mb-4" data-aos="fade-up">Technical Implementation</h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">How our AI-powered solution works to save lives</p>
+        <div data-aos="fade-up" data-aos-delay="400">
+            <a href="#model" class="btn btn-light btn-lg rounded-pill px-4 me-2">AI Model</a>
+            <a href="#architecture" class="btn btn-outline-light btn-lg rounded-pill px-4">System Architecture</a>
+        </div>
+    </div>
+</section>
+
+<!-- AI Model Section -->
+<section id="model" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="mb-4">
+                    <span class="badge bg-primary rounded-pill px-3 py-2 mb-2">Machine Learning</span>
+                    <h2 class="fw-bold">How Our AI Predicts Risk</h2>
+                </div>
+                <p>MamaGuardian AI uses supervised machine learning to analyze maternal health data and identify high-risk pregnancies. Our model evaluates various risk factors and generates a comprehensive risk assessment.</p>
+                
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="text-primary fw-bold">Training Data Sources</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 ps-0">
+                                <i class="fas fa-database me-2 text-primary"></i> KDHS: Kenya Demographic and Health Survey
+                            </li>
+                            <li class="list-group-item border-0 ps-0">
+                                <i class="fas fa-table me-2 text-primary"></i> Kaggle Maternal Health Risk datasets
+                            </li>
+                            <li class="list-group-item border-0 ps-0">
+                                <i class="fas fa-folder me-2 text-primary"></i> Anonymized clinic records from project partners
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p>It evaluates risk factors like blood pressure, age, hemoglobin, parity, and region — then generates a 0–100% risk score and classifies mothers as Low, Medium, or High risk.</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="position-relative">
+                    <img src="{% static 'images/model.jpg' %}" class="img-fluid rounded shadow-lg pulse" alt="AI Model">
+                    <div class="position-absolute top-0 end-0 bg-white p-3 rounded shadow-sm" style="transform: translate(20px, -20px);">
+                        <div class="text-center">
+                            <span class="d-block counter-value h3 fw-bold text-primary" data-target="90">87</span>
+                            <small class="text-muted">% Accuracy</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center section-heading" data-aos="fade-up">Key Features</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card h-100 feature-item">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h5 class="text-danger fw-bold mt-3">90% Accuracy</h5>
+                        <p class="text-muted">Validated against clinical benchmarks with high sensitivity and specificity</p>
+                        <div class="mt-3">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 feature-item">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-wifi-slash"></i>
+                        </div>
+                        <h5 class="text-danger fw-bold mt-3">Offline Mode</h5>
+                        <p class="text-muted">CHVs can collect and store data offline, syncing when connected</p>
+                        <div class="mt-3">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 feature-item">
+                    <div class="card-body p-4">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h5 class="text-danger fw-bold mt-3">SMS Alerts</h5>
+                        <p class="text-muted">Automated messages notify health workers of new high-risk cases</p>
+                        <div class="mt-3">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mobile App & Dashboard Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-heading" data-aos="fade-up">Mobile App & Dashboard</h2>
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="card border-0 shadow overflow-hidden">
+                    <div class="position-relative">
+                        <img src="{% static 'images/app-screen-1.jpg' %}" class="img-fluid w-100 floating" alt="App Screenshot">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
+                            <h5 class="mb-0">CHV Mobile App</h5>
+                            <small>Risk assessment at your fingertips</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="card border-0 shadow overflow-hidden">
+                    <div class="position-relative">
+                        <img src="{% static 'images/dashboard.jpg' %}" class="img-fluid w-100 floating" alt="Dashboard">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
+                            <h5 class="mb-0">County Health Dashboard</h5>
+                            <small>Comprehensive health system insights</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6" data-aos="fade-up">
+                <h4 class="fw-bold mb-3">Mobile Features</h4>
+                <div class="d-flex mb-3">
+                    <div class="feature-icon me-3">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Patient Registration</h5>
+                        <p class="text-muted">Quick form with offline storage capabilities</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="feature-icon me-3">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Risk Assessment</h5>
+                        <p class="text-muted">Automated scoring with real-time feedback</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="feature-icon me-3">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Follow-up Management</h5>
+                        <p class="text-muted">Scheduling with reminder notifications</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="fw-bold mb-3">Dashboard Capabilities</h4>
+                <div class="d-flex mb-3">
+                    <div class="feature-icon me-3">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Analytics & Reporting</h5>
+                        <p class="text-muted">Real-time county health metrics and trends</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="feature-icon me-3">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Geographic Mapping</h5>
+                        <p class="text-muted">Visual hotspot identification for resource allocation</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="feature-icon me-3">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Alert Management</h5>
+                        <p class="text-muted">System for coordinating responses to critical cases</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- System Architecture Section -->
+<section id="architecture" class="py-5">
+    <div class="container">
+        <h2 class="text-center section-heading" data-aos="fade-up">System Architecture</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-0">
+                        <img src="{% static 'images/architecture.png' %}" class="img-fluid w-100 rounded" alt="System Diagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-4">Technology Stack</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary-soft p-2 rounded me-3">
+                                <i class="fab fa-react fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">Frontend</h5>
+                                <p class="text-muted mb-0">React Native (mobile) and React (web)</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary-soft p-2 rounded me-3">
+                                <i class="fas fa-server fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">Backend</h5>
+                                <p class="text-muted mb-0">FastAPI REST API</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary-soft p-2 rounded me-3">
+                                <i class="fas fa-database fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">Database</h5>
+                                <p class="text-muted mb-0">MongoDB with secure storage</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary-soft p-2 rounded me-3">
+                                <i class="fas fa-comment-alt fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">Alerts</h5>
+                                <p class="text-muted mb-0">Africa's Talking SMS Gateway</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary-soft p-2 rounded me-3">
+                                <i class="fab fa-python fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-0">ML Pipeline</h5>
+                                <p class="text-muted mb-0">Python (scikit-learn, XGBoost)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-4">Security & Compliance</h4>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-shield-alt text-primary me-2"></i>
+                                <h5 class="fw-bold mb-0">Data Protection</h5>
+                            </div>
+                            <p class="text-muted">All patient data is encrypted at rest and in transit using industry-standard encryption protocols. We comply with Kenya's Data Protection Act.</p>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-user-lock text-primary me-2"></i>
+                                <h5 class="fw-bold mb-0">Access Control</h5>
+                            </div>
+                            <p class="text-muted">Role-based access control ensures that users only see data relevant to their responsibilities. All access is logged and audited.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-server text-primary me-2"></i>
+                                <h5 class="fw-bold mb-0">Infrastructure Security</h5>
+                            </div>
+                            <p class="text-muted">Our cloud infrastructure is hosted on secure servers with regular security audits and penetration testing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% block extra_js %}
+<script>
+    // Technical page-specific animations and effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const heroSection = document.querySelector('.hero-section');
+            const scrollPosition = window.pageYOffset;
+            if (heroSection) {
+                heroSection.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
+            }
+        });
+        
+        // Animate architecture diagram with hover effect
+        const architectureImg = document.querySelector('#architecture img');
+        if (architectureImg) {
+            architectureImg.addEventListener('mouseenter', function() {
+                architectureImg.style.transform = 'scale(1.02)';
+                architectureImg.style.transition = 'all 0.3s ease';
+            });
+            
+            architectureImg.addEventListener('mouseleave', function() {
+                architectureImg.style.transform = 'scale(1)';
+            });
+        }
+    });
+</script>
+{% endblock %}
+{% endblock %}
