@@ -10,13 +10,24 @@
     /* Team Page Specific Styles */
     .team-banner {
         position: relative;
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('{% static 'images/hero-background.jpg' %}') center/cover no-repeat;
+        background: linear-gradient(rgba(173,216,230,0.85), rgba(0,123,255,0.25)), url('{% static 'images/hero-background.jpg' %}') center/cover no-repeat;
         height: 50vh;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 4rem;
-        /* Removed any green background or color here */
+        /* Light blue shades overlay */
+    }
+    .content-wrapper {
+        background: rgba(220, 240, 255, 0.85); /* light blue background */
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(15,57,194,0.10);
+        padding: 2.5rem 2rem;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
     }
     
     .section-heading {
@@ -407,7 +418,7 @@
     <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1000" style="background: none !important; box-shadow: none !important;">
         <h5 class="text-warning fw-bold mb-3 shimmer-text">Meet The Innovators</h5>
         <h1 class="display-4 fw-bold mb-3">Our Talented Team</h1>
-        <p class="lead" style="color: #fff;">The experts behind MamaGuardian AI, working to improve maternal healthcare in Kenya</p>
+        <p class="lead" style="color: #fff;"><b>The experts behind MamaGuardian AI, working to improve maternal healthcare in Kenya</b></p>
     </div>
 </section>
 
@@ -555,6 +566,8 @@
         <div class="modal-bio" id="modalBio"></div>
     </div>
 </div>
+
+
 {% endblock %}
 
 {% block extra_js %}
@@ -570,35 +583,35 @@
             once: false,
             mirror: false
         });
-        
-        // Create particles background
+
+        // Create particles background (dark blue, more visible)
         if (document.getElementById('particles-js')) {
             particlesJS('particles-js', {
                 "particles": {
                     "number": {
-                        "value": 30,
+                        "value": 60,
                         "density": {
                             "enable": true,
                             "value_area": 800
                         }
                     },
                     "color": {
-                        "value": "#ffffff"
+                        "value": "#0f39c2" // dark blue
                     },
                     "shape": {
                         "type": "circle",
                     },
                     "opacity": {
-                        "value": 0.3,
+                        "value": 0.7,
                         "random": true
                     },
                     "size": {
-                        "value": 5,
+                        "value": 12,
                         "random": true
                     },
                     "move": {
                         "enable": true,
-                        "speed": 1,
+                        "speed": 1.2,
                         "direction": "top",
                         "random": true,
                         "straight": false,
@@ -621,9 +634,9 @@
                     "modes": {
                         "bubble": {
                             "distance": 250,
-                            "size": 6,
+                            "size": 16,
                             "duration": 2,
-                            "opacity": 0.8,
+                            "opacity": 0.9,
                             "speed": 3
                         },
                         "push": {
