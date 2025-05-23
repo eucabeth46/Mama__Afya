@@ -37,11 +37,13 @@
 .content-wrapper {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 2.5rem;
+    max-width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 2.5 rem;
     border-radius: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.35);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background-color:  #4aceb8;
+    box-shadow: 0 15px 35px  #4aceb8;
     transition: all 0.5s ease;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -49,8 +51,8 @@
 
 .hero-section:hover .content-wrapper {
     transform: translateY(-10px);
-    background-color: rgba(0, 0, 0, 0.45);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background-color: #4aceb8;
+    box-shadow: 0 20px 40px  #4aceb8;
 }
 
 /* Text Effects */
@@ -70,8 +72,9 @@
 
 /* Button Animations */
 .pulse-btn {
-    background-color: #e63946;
-    border-color: #e63946;
+    background-color: #39e6b2;
+    color: #fff;
+    border-color:  #4aceb8;
     font-weight: 600;
     position: relative;
     overflow: hidden;
@@ -79,9 +82,9 @@
 }
 
 .pulse-btn:hover {
-    background-color: #d62c3b;
+    background-color: #4aceb8;
     transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(230, 57, 70, 0.4);
+    box-shadow: 0 7px 20px  #4aceb8;
 }
 
 .pulse-btn::after {
@@ -111,8 +114,8 @@
 
 .hover-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 7px 15px rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 7px 15px #4aceb8;
+    background-color:  #4aceb8;
 }
 
 /* Cards and Sections */

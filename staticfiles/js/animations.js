@@ -77,3 +77,105 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        easing: 'ease',
+        once: false,
+        mirror: false
+    });
+
+    // Particles.js background for hero section
+    if (document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 30, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.3, "random": true },
+                "size": { "value": 5, "random": true },
+                "move": {
+                    "enable": true, "speed": 1, "direction": "top",
+                    "random": true, "straight": false, "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "bubble" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "bubble": {
+                        "distance": 250, "size": 6,
+                        "duration": 2, "opacity": 0.8, "speed": 3
+                    },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    }
+
+    // Modal functionality for member bios
+    const modal = document.getElementById('bioModal');
+    const modalName = document.getElementById('modalName');
+    const modalRole = document.getElementById('modalRole');
+    const modalBio = document.getElementById('modalBio');
+    const closeModal = document.getElementById('closeModal');
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            modalName.textContent = btn.getAttribute('data-name');
+            modalRole.textContent = btn.getAttribute('data-role');
+            modalBio.textContent = btn.getAttribute('data-bio');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Slide-up effect for .slide-up elements
+    const slideElements = document.querySelectorAll('.slide-up');
+
+    function checkSlide() {
+        slideElements.forEach(element => {
+            const slideInAt = (window.scrollY + window.innerHeight) - element.offsetHeight / 2;
+            const elementBottom = element.offsetTop + element.offsetHeight;
+            if (slideInAt > element.offsetTop && window.scrollY < elementBottom) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkSlide);
+    checkSlide(); // On load
+
+    // Hover color transition for member names
+    const teamCards = document.querySelectorAll('.team-card');
+
+    teamCards.forEach(card => {
+        const nameElement = card.querySelector('.member-name');
+        card.addEventListener('mouseenter', () => {
+            nameElement.style.color = 'var(--accent-pink)';
+        });
+        card.addEventListener('mouseleave', () => {
+            nameElement.style.color = 'var(--deep-blue)';
+        });
+    });
+});
+

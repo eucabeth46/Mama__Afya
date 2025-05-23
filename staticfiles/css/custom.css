@@ -29,34 +29,34 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Replace default Bootstrap button styles */
 .btn-primary {
-  background-color: var(--primary-teal) !important;
-  border-color: var(--primary-teal) !important;
+  background-color: #0f39c2 !important;
+  border-color: #0f39c2 !important;
 }
 
 .btn-primary:hover {
-  background-color: #28a090 !important;
-  border-color: #28a090 !important;
+  background-color: #0f39c2;
+  border-color: #0f39c2 ;
 }
 
 .btn-outline-primary {
-  color: var(--primary-teal) !important;
-  border-color: var(--primary-teal) !important;
+  color: #0f39c2 !important;
+  border-color: #0f39c2 !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--primary-teal) !important;
+  background-color: #0f39c2 !important;
   color: white !important;
 }
 
 /* Replace danger button with accent button */
 .btn-danger, .btn-accent {
-  background-color: var(--accent-pink) !important;
-  border-color: var(--accent-pink) !important;
+  background-color: #0f39c2!important;
+  border-color: #0f39c2!important;
 }
 
 .btn-danger:hover, .btn-accent:hover {
-  background-color: #e85f7d !important;
-  border-color: #e85f7d !important;
+  background-color: #0f39c2 !important;
+  border-color: #0f39c2 !important;
 }
 
 .btn-outline-light:hover {
@@ -65,11 +65,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Text colors */
 .text-danger, .highlight-text {
-  color: var(--accent-pink) !important;
+  color: #0f39c2 !important;
 }
 
 .text-primary {
-  color: var(--primary-teal) !important;
+  color: #0f39c2 !important;
 }
 
 /* Card and Container Backgrounds */
@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation */
 .navbar {
   background-color: white !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px var(--accent-pink);
 }
 
 .nav-link {
@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer styling */
 footer {
-  background-color: var(--deep-blue);
+  background-color: var(--primary-teal);
   color: white;
 }
 
